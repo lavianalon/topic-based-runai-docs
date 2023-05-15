@@ -54,6 +54,6 @@ jobs:
             git config user.email "circleci-runai@run.ai"
 #            git fetch origin gh-pages --depth=1
         
-         - name: deploy mkdocs latest
-           run: |
+        - name: deploy mkdocs latest
+          run: |
             mkdocs gh-deploy --force
