@@ -210,6 +210,10 @@ nav:
       - 'Use a Docker Registry with Credentials' : 'admin/researcher-setup/docker-registry-config.md'
       - 'Setup cluster wide PVC' : 'admin/researcher-setup/cluster-wide-pvc.md'
       - 'Group Nodes' : 'admin/researcher-setup/limit-to-node-group.md'
+      - 'Projects' : 
+        - 'Overview' : 'admin/admin-ui-setup/project-setup.md'
+        - 'Configure projects CLI' : 'admin/admin-ui-setup/project-setup-cli.md'
+        - 'Configure projects UI' : 'admin/admin-ui-setup/project-setup-ui.md'
     - 'Workloads' : 
       - 'Overview' : 'admin/workloads/workload-overview-admin.md'
       - 'Policies' : 'admin/workloads/policies.md'
@@ -218,7 +222,6 @@ nav:
     - 'User Interface' :
       - 'Overview' : 'admin/admin-ui-setup/overview.md'
       - 'Users' : 'admin/admin-ui-setup/admin-ui-users.md'
-      - 'Projects' : 'admin/admin-ui-setup/project-setup.md'
       - 'Departments' : 'admin/admin-ui-setup/department-setup.md'
       - 'Dashboard Analysis' : 'admin/admin-ui-setup/dashboard-analysis.md'
       - 'Jobs' : 'admin/admin-ui-setup/jobs.md'
