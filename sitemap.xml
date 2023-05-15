@@ -356,6 +356,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.run.ai/admin/admin-ui-setup/project-setup-cli/</loc>
+         <lastmod>2023-05-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.run.ai/admin/admin-ui-setup/project-setup-ui/</loc>
+         <lastmod>2023-05-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.run.ai/admin/admin-ui-setup/project-setup/</loc>
          <lastmod>2023-05-15</lastmod>
          <changefreq>daily</changefreq>
