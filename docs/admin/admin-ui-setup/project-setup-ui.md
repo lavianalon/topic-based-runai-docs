@@ -26,7 +26,7 @@ To guarantee resources for all workloads including non-preemptible workloads, th
 
 To configure resources for node pools
 
-1. Go to the _Node Pools_ tab under Project and set a quota to any of the node pools (GPU resources, CPU resources) you want to use.
+1. Go to the *Node Pools* tab under Project and set a quota to any of the node pools (GPU resources, CPU resources) you want to use.
 2. To set the Project's default node pool's order of priority, you should set the precedence of each node pool, this is done in the Project's node pool tab.
 3. The node pool default priority order is used if the workload did not specify its preferred node pool(s) list of priority.
 4. To mandate a Workload to run on a specific node pool, the Researcher should specify the node pool to use for a workload. 
