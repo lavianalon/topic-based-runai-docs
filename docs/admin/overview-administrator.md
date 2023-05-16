@@ -4,9 +4,9 @@ The role of Administrators is to set up Run:ai and perform day-to-day monitoring
 
 As part of the Administrator documentation you will find:
 
-* __Run:ai Setup__ How to set up and modify a GPU cluster with Run:ai.
-* __Researcher Setup__ How to set up Researchers to work with Run:ai.
-* How to configure __Workloads__ and Workload __Policies__.
-* Setting and maintaining the cluster via the  __Run:ai User Interface__.
-* __Troubleshooting__ Run:ai and understanding cluster health.
-* __Integrations__ of Run:ai with a variety of other systems.
+* **Run:ai Setup** How to set up and modify a GPU cluster with Run:ai.
+* **Researcher Setup** How to set up Researchers to work with Run:ai.
+* How to configure **Workloads** and Workload **Policies**.
+* Setting and maintaining the cluster via the  **Run:ai User Interface**.
+* **Troubleshooting** Run:ai and understanding cluster health.
+* **Integrations** of Run:ai with a variety of other systems.
