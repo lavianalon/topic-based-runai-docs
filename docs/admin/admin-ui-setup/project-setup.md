@@ -1,3 +1,10 @@
+---
+title: Projects Overview
+summary: This article describes the concepts needed for setting up a project.
+authors:
+    - Jason Novich
+date: 2022-May-15
+---
 # Introduction
 
 Run:ai introduces the concept of **Projects** to streamline resource allocation, prioritize work, and create segregation between different initiatives. 

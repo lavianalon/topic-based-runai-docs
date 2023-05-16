@@ -1,8 +1,8 @@
 site_name: Run:ai Documentation Library
 site_url: https://docs.run.ai/
 copyright: Copyright © 2020 - 2023 Run:ai
-repo_url: https://github.com/run-ai/docs/
-edit_uri: edit/v2.11/docs/
+repo_url: https://github.com/jasonnovichRunAI/topic-based-runai-docs
+edit_uri: edit/main/docs/
 docs_dir: docs 
 theme: 
   name: material
