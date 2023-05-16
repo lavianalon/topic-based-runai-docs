@@ -7,10 +7,10 @@ date: 2022-May-15
 ---
 # Introduction
 
-Run:ai introduces the concept of **Projects** to streamline resource allocation, prioritize work, and create segregation between different initiatives. 
+Run:ai introduces the concept of **Projects** to streamline resource allocation, prioritize work, and create segregation between different initiatives.
 A project can represent a team, an individual, or an initiative that shares resources, or has specific resource quotas.
 
-Researchers who submit jobs need to associate a Project name with the Job request. The Run:ai scheduler will compare the request against the current 
+Researchers who submit jobs need to associate a Project name with the Job request. The Run:ai scheduler will compare the request against the current
 allocated resources and determine whether the job should be schedules (with resources) if it should remain in the queue for future allocation.
 
 A project consists of the following:
