@@ -44,7 +44,7 @@ it then tries each one in the priority list until it can successfully allocate t
 Each Project is allocated with a total quota of GPU and CPU resources (CPU Compute & CPU Memory) and is the sum of all the node pool quotas associated with this Project.
 This is a **guaranteed quota** of resources that the project gets regardless of the cluster status.
 
-Users of a Project are able to get more resources than in the quota. This is called **over-quota** and is enabled per project by the Administrator. As long as there are unused GPUs, a Researcher can get more. **However, these GPUs can be taken away at any given moment.
+Users of a Project are able to get more resources than in the quota. This is called **over-quota** and is enabled per project by the Administrator. As long as there are unused GPUs, a Researcher can get more. **However, these GPUs can be taken away at any given moment.**
 
 When the node pools flag is enabled, over-quota is also enabled and calculated per node pool. This means that a workload requesting resources from one node pool whose quota is used up, can get its resources from a quota that belongs to different Project for the same node pool. For more details on over-quota scheduling see [the Run:ai Scheduler](../../Researcher/scheduling/the-runai-scheduler.md).
 
