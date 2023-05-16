@@ -1,10 +1,5 @@
 # Configure projects CLI
 
-
-
-
-
-
 ## Grouping Nodes using Node Pools  
 To create a node pool you must first annotate nodes with a label or use an existing node label, as the key for grouping nodes into pools. You can use any unique label (in the format `key:value`) to form a node pool. a node pool is characterized by a label but also has its own unique node pool name.
 
