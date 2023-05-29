@@ -7,23 +7,19 @@ date: 2022-May-15
 ---
 # Introduction to Projects
 
-!!! Info
-    This is one of the new pages of the Projects reorganization. It is the "Cooncept" page where information about projects is discussed for the reader.
-
-Run:ai introduces the concept of **Projects** to streamline resource allocation, prioritize work, and create segregation between different initiatives.
+Run:ai's **Projects** streamlines resource allocation, prioritizes work, and creates segregation between different initiatives.
 A project can represent a team, an individual, or an initiative that shares resources, or has specific resource quotas.
 
-Researchers who submit jobs need to associate a Project name with the Job request. The Run:ai scheduler will compare the request against the current
-allocated resources and determine whether the job should be schedules (with resources) if it should remain in the queue for future allocation.
+When a job is submitted, it needs to be associated with a Project name. Projects are one way of optimizing resources and prioritization for submitted jobs.
 
-!!! Info
-    This section is a new section based on the components in a project as listed in the sections they are linked to.
+The Run:ai scheduler will compare the request against the current
+allocated resources and determine whether the job should be scheduled (with resources) if it should remain in the queue for future allocation.
 
-A project consists of the following:
+A project consists of the following components:
 
-* [Node Pools](#node-pools)
-* [Project Quotas](#project-quotas)
-* [Assigned users](#assign-users-to-project)
+* [Node Affinity](
+* [Time Limit]
+* [Assigned users]
 
 ## Modeling Projects - not new title, formatting, rewritten content
 
