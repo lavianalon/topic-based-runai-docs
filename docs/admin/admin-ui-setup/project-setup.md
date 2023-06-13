@@ -3,6 +3,7 @@ title: Projects Overview
 summary: This article describes the concepts needed for setting up a project.
 authors:
     - Jason Novich
+    - Alon Lavian
 date: 2022-May-15
 ---
 # Introduction to Projects
