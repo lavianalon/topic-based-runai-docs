@@ -1,72 +1,60 @@
-# Configure projects UI
+# Configuring Projects
 
-## Create a Project
+## Create a project
 
 !!! Note 
-    To be able to create or edit Projects, you must have *Editor* access. See the [Users](admin-ui-users.md) documentation.
+
+    * To create a project you must have at least one department configured. For more information, see [Configure a departmeny]().
+    * To be able to create or edit Projects, you must have *Editor* access. See the [Users](admin-ui-users.md) documentation.
+
 To create a project:
 
-1. Login to the Projects area of the Run:ai user interface at `<company-name>.run.ai`.
-2. On the top right, select "Add New Project".
-3. Choose a Project name and a Project quota.
-4. Press "Save".
+1. Login to the Run:ai interface and press **Projects**.
+2. Press *+ New Project*.
+3. In the *Departments* pane, select a department from the dropdown.
 
-## Configure over-quota
+    !!! Note
+        You must select a department from the dropdown list to create a project.
 
-To configure over-quota settings:
+4. Enter a project name. By default, the namespace is created from the name of the project. To change the namespace to an exisitng one, press the *Namespace* dropdown, then select *Enter existing namespace from ther cluster*, and type it in.
+5. In the *Access control* pane, press *+ User type*, then choose either *Users* or *Applications*.
 
-1. Under `General | Settings` turn on the `Enable Over-quota Priority`.
-2. When creating a new Project, move the slider for over-quota priority from`None` to `High`.
+    * *Users*&mdash;use the dropdown to select users that are defined in the system. Select as many users as needed.
+    * *Applications*&mdash;use the dropdown to select from a list of applications in the system. Select as many applications as needed. 
 
-## Setting Node Pools for a Specific Project
+6. In the *Quota management* pane, configure the behavior of the node pools:
 
-By default, all node pools are associated with every Project and Department using zero resource allocation. This means that by default any Project can use any node-pool if Over-Quota is set for that Project, but only for preemptible workloads (for example, Training or Interactive workloads using Preemptible flag).
+    * *Order of priority*&mdash;the priority the node pool will receive when trying to schedule workloads. Choose `none`, `1`, `2`, or `3` from the dropdown menu. For more information, see [Node pool priority](../../Researcher/scheduling/using-node-pools.md#multiple-node-pools-selection).
+    * *GPUs*&mdash;the number of GPUs in the node pool. Press the *GPUs* button and in the popup window, enter the nuber of GPUs you think you need, then press *Apply* to save.
+    * *CPUs(Cores)*&mdash;the number of CPU cores in the node pool. Press the *CPUs* button and in the popup window, enter the nuber of CPUs you think you need, then press *Apply* to save.
+    * *CPU Memory*&mdash;the amount of memory the CPUs will be allocated. Press the *CPU Memory* button and in the popup window, enter the amount of memory in MB you think you need, then press *Apply* to save.
+    * Over quota priority&mdash;the priority for the specific node pool to receive over quota allocations. Choose `None`, `Low`, `Medium`, or `High` from the dropdown menu.
 
-To guarantee resources for all workloads including non-preemptible workloads, the administrator should allocate resources in node pools.
+7. (Optional) In the *Scheduling rules* pane, use the dropdown arrow to open the pane. Press on the *+ Rule* button to add a new rule to the project. Add one (or more) of the following rule types:
 
-To configure resources for node pools
+    * *Idle GPU timeout*&mdash;controls the amount of time that GPUs which are idle will be remain assigned to the project. From the dropdown choose a workload type, then enter the number of days, hours, and minutes before the GPUs are reassigned. You can add multiple rules by pressing on the *+ Idle GPU Timeout*.
+    * *Workspace duration*&mdash;limit the length of time a workspace will run for. Enter the number of days, hours, and minutes before the workspace is terminated. You can add multiple rules by pressing on the *+ Rukle*.
+    * *Training duration*&mdash;limit the length of time training workloads will run for. Enter the number of days, hours, and minutes before the workspace is terminated. You can add multiple rules by pressing on the *+ Rule*.
+    * *Node type (Affinity)*&mdash;limits workloads to run on specific node types. From the dropdown choose a workload type, and then enter a node typoe. You can add multiple rules by pressing on the *+ Node type*.
 
-1. Go to the *Node Pools* tab under Project and set a quota to any of the node pools (GPU resources, CPU resources) you want to use.
-2. To set the Project's default node pool's order of priority, you should set the precedence of each node pool, this is done in the Project's node pool tab.
-3. The node pool default priority order is used if the workload did not specify its preferred node pool(s) list of priority.
-4. To mandate a Workload to run on a specific node pool, the Researcher should specify the node pool to use for a workload. 
-5. If no node-pool is specified - the Project's 'Default' node-pool priority list is used. 
-6. Press 'Save' to save your changes.
+8. When you have finished the configuration, press *Create project*.
 
-## Setting Affinity for a Specific Project
- 
-To mandate Jobs to run on specific node groups:
+## Managing projects
 
-1. Create a Project or edit an existing Project.
-2. Choose either **training** or **interactive**.
-3. Go to the *Node Affinity* tab and set a limit to specific node groups.
-4. If the label does not yet exist, press the + sign and add the label.
-5. Press Enter to save the label.
-6. Select the label.
+After you have created a project, it will appear in the list of projects.
 
-## Limit Duration of Interactive and Training Jobs
+To change a project's configuration:
 
-As interactive sessions involve human interaction, you can additional enforce a policy that sets the time limit for such sessions. This policy is often used to handle situations for when sessions are left open when there is no need to access the resources.
-
-!!! Warning
-    This feature will cause containers to automatically stop. Any work not saved to a shared volume will be lost.
-
-To set a duration limit for interactive Jobs:
-
-1. Create a Project or edit an existing Project.
-2. Go to the *Time Limit* tab. This is effective for Interactive Jobs that are Preemptible, non-Preemptible, or both.  You can limit interactive Jobs using two criteria:
-    1. Set a hard time limit (day, hour, minute) to an Interactive Job, regardless of the activity of this Job (for example, stop the Job after 1 day of work.)
-    2. Set a time limit for Idle Interactive Jobs (for example, an Interactive Job idle for `X` time is stopped. Idle means no GPU activity.)
-
-!!! Note
-    The setting only takes effect for Jobs that have started after the duration has been changed.
-
-In some cases you may want to stop a Training Job if `X` time elapsed since it has started to run. This can be to clean up stale Training Jobs or Jobs that are running for too long due to the wrong parameters set or other errors in the model.
-
-To set a duration limit for Training Jobs:
-
-1. Create a Project or edit an existing Project.
-2. Go to the *Time Limit* tab and set a time limit for Idle Training Jobs (for example, a Training Job idle for `X` time is stopped. Idle means no GPU activity.)
-    
-!!! Note
-    The setting only takes effect for Jobs that have started after the duration has been changed. 
+1. Select the project from the list of projects. You can select only one project at as time.
+2. Press the *Edit* button.
+3. Select a department from the dropdown list.
+    !!! Note
+        You can't change or edit the name of the project.
+4. Using the dropdown, add users or applications. To remove users or applications, press the *x* next to the email or application.
+5. In *Quota management* pane change:
+    * *Order of priority*&mdash;the priority the node pool will receive when trying to schedule workloads. Choose `none`, `1`, `2`, or `3` from the dropdown menu. For more information, see [Node pool priority](../../Researcher/scheduling/using-node-pools.md#multiple-node-pools-selection).
+    * *GPUs*&mdash;the number of GPUs in the node pool. Press the *GPUs* button and in the popup window, enter the nuber of GPUs you think you need, then press *Apply* to save.
+    * *CPUs(Cores)*&mdash;the number of CPU cores in the node pool. Press the *CPUs* button and in the popup window, enter the nuber of CPUs you think you need, then press *Apply* to save.
+    * *CPU Memory*&mdash;the amount of memory the CPUs will be allocated. Press the *CPU Memory* button and in the popup window, enter the amount of memory in MB you think you need, then press *Apply* to save.
+    * Over quota priority&mdash;the priority for the specific node pool to receive over quota allocations. Choose `None`, `Low`, `Medium`, or `High` from the dropdown menu.
+6. In te *Sceduling rules* pane you can choose to edit any of the folloing rules:
