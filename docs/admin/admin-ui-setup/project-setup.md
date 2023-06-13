@@ -40,7 +40,7 @@ This rule controls the amount of time that GPUs which are idle will be remain as
 
 ### Workspace duration
 
-Setting a workspace duration will limit the length of time a workspace will run for. Workspaces are interactive sessions that typically require human interaction. This rule is used in cases where researchers have left their training sessions open, which leaves idle resources allocated . This rule enables better resource and over quota management. The workspace will stop regardless of the activities currently running and is configured in days, hours, and minutes.
+Setting a workspace duration will limit the length of time a workspace will run for. Workspaces are interactive sessions that typically require human interaction. This rule is used in cases where researchers have left their training sessions open, which leaves idle resources allocated. This rule enables better resource and over quota management. The workspace will stop regardless of the activities currently running and is configured in days, hours, and minutes.
 
 ### Training duration
 
